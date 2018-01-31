@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html data-wf-site="576993008a6044ef2ce2dc3e" data-wf-page="576993008a6044ef2ce2dc3f">
+<head>
+  <meta charset="utf-8">
+  <title>Digital PullBoard | Small</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="generator" content="Webflow">
+  <link rel="stylesheet" type="text/css" href="css/normalize.css">
+  <link rel="stylesheet" type="text/css" href="css/webflow.css">
+  <link rel="stylesheet" type="text/css" href="css/digital-pullboard-sample.webflow.css">
+  
+  
+  
+  
+  <script src="https://ajax.googleapis.com/ajax/libs/webfont/1.4.7/webfont.js"></script>
+  <script>
+    WebFont.load({
+      google: {
+        families: ["PT Serif:400,400italic,700,700italic"]
+      }
+    });
+  </script>
+  <script type="text/javascript" src="js/modernizr.js"></script>
+  <link rel="shortcut icon" type="image/x-icon" href="https://daks2k3a4ib2z.cloudfront.net/img/favicon.ico">
+  <link rel="apple-touch-icon" href="https://daks2k3a4ib2z.cloudfront.net/img/webclip.png">
+</head>
+<body class="bodymain">
+  <div class="sectionheader w-section">
+    <div class="navbarheader w-nav" data-animation="default" data-collapse="medium" data-contain="1" data-duration="400">
+      <div class="containernav w-container">
+        <a class="dealershiplogo w-nav-brand" href="#"><img class="imagelogo" src="images/logo-area-main.png" width="411">
+        </a>
+        <!--<nav class="left navmenu w-clearfix w-nav-menu" role="navigation"><a class="buttonreset w-nav-link" href="#" id="reward_btn">Rewards</a>
+        </nav>-->
+        <nav class="navmenu w-clearfix w-nav-menu" role="navigation"><a class="buttonreset w-nav-link" href="#" id="restart">Play Again!</a>
+        </nav>
+        <div class="w-nav-button">
+          <div class="w-icon-nav-menu"></div>
+        </div>
+      </div>
+    </div>
+    <div><img class="topshape" src="images/top-shape.png">
+    </div>
+    <div class="headerbase"></div>
+  </div>
+  <div class="sectionpulls w-section">
+    <div class="w-container">
+      <div class="w-row" id="cards">
+      
+      
+        
+        
+       
+      </div>
+     
+      
+    </div>
+  </div>
+  
+  <div id="rewards_overlay">
+  <div id="rewards"><h2>What you could win!</h2></div>
+  </div>
+  
+  <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+  <script type="text/javascript" src="js/webflow.js"></script>
+  <!--[if lte IE 9]><script src="https://cdnjs.cloudflare.com/ajax/libs/placeholders/3.0.2/placeholders.min.js"></script><![endif]-->
+  
+  
+  
+  <script>
+  
+  
+  
+  $(document).ready(function(){
+  
+  $.get( "rewards.xml", function( data ) {
+	  var xml = data,
+	  xmlDoc = $.parseXML( xml ),
+	  $xml = $( xmlDoc ),
+	  $amount = $xml.find( "amount" );
+	});*/
+		
+  /*  comment out when on web server for xml file  */ 
+  /* 
+  var xml = '<xml><amount>$400</amount><amount>$400</amount><amount>$300</amount><amount>$300</amount><amount>$300</amount><amount>$300</amount><amount>$200</amount><amount>$200</amount><amount>$200</amount><amount>$200</amount><amount>$200</amount><amount>$200</amount><amount>$200</amount><amount>$200</amount><amount>$200</amount><amount>$200</amount><amount>$200</amount><amount>$200</amount><amount>$200</amount><amount>$200</amount><amount>$200</amount><amount>$200</amount><amount>$100</amount><amount>$100</amount><amount>$100</amount><amount>$100</amount><amount>$100</amount><amount>$100</amount><amount>$100</amount><amount>$100</amount><amount>$100</amount><amount>$100</amount><amount>$100</amount><amount>$100</amount><amount>$100</amount><amount>$100</amount><amount>$100</amount><amount>$100</amount><amount>$100</amount><amount>$100</amount><amount>$100</amount><amount>$100</amount><amount>$100</amount></xml>',  
+  xmlDoc = $.parseXML( xml ),
+  $xml = $( xmlDoc ),
+  $amount = $xml.find( "amount" ); */
+    
+  /*  end comment out*/
+  
+  var arr = [];
+
+  $amount.each(function(index, element) {
+	  arr[index] = $(element).text();
+	  $("#rewards").append($(element).text() + '<br>'); 	
+   });
+   
+   arr.sort(function() {
+		return Math.random()*10 > 5 ? 1 : -1;
+	});
+	
+	
+	$.each(arr, function(index, element) {
+	 	var i = index+1;
+		if(element != null) {
+		$("#cards").append('<div class="w-col w-col-3"><div id="num">' + i + '</div><div class="blockpullcard"></div><div class="ammount">' + element + '</div></div>');
+		}
+		
+		
+   });
+   
+   $("#rewards_overlay").click(function(){
+		$("#rewards_overlay").hide();
+	});
+
+   
+   $(".blockpullcard").click(function(){
+		$(this).hide();
+	});
+	
+	$("#restart").click(function(){
+		location.reload();
+	});
+	
+	$("#reward_btn").click(function(){
+		$("#rewards_overlay").show();
+	});
+ 
+});
+</script>
+</body>
+</html>

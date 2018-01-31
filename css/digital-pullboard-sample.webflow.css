@@ -1,0 +1,238 @@
+.bodymain {
+  background-color: #fff;
+  background-image: url('../images/background.jpg');
+  background-position: 50% 0px;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.navbarheader {
+  position: fixed;
+  left: 0px;
+  top: 0px;
+  right: 0px;
+  z-index: 8000;
+  display: block;
+  height: 67px;
+  padding-top: 10px;
+  padding-bottom: 4px;
+  border-bottom: 4px none #bebebe;
+  background-color: transparent;
+}
+
+.buttonreset {
+  position: static;
+  left: 186px;
+  display: block;
+  width: 238px;
+  margin-top: 48px;
+  margin-right: auto;
+  margin-left: auto;
+  float: left;
+  background-image: url('../images/silver-tab.png');
+  background-position: 50% 100%;
+  background-size: contain;
+  background-repeat: no-repeat;
+  font-family: 'PT Serif', serif;
+  color: #FFF;
+  font-size: 18px;
+  font-weight: 700;
+  text-align: center;
+}
+
+.imagebackheader {
+  position: static;
+  left: 0px;
+  top: 0px;
+  right: 0px;
+  z-index: 100;
+  float: right;
+}
+
+.imagetab {
+  position: static;
+  left: -4px;
+  top: 0px;
+  right: 0px;
+  bottom: 0px;
+  z-index: 1001;
+  display: inline-block;
+  overflow: visible;
+  margin-top: -85px;
+  padding-top: 0px;
+  text-align: center;
+}
+
+.linktext {
+  position: static;
+  left: 346px;
+  top: 20px;
+  overflow: hidden;
+  height: auto;
+  color: #2a2a2a;
+}
+
+.navmenu {
+  position: static;
+  display: block;
+  margin-top: -101px;
+  margin-right: auto;
+  margin-left: auto;
+  padding-top: 0px;
+  text-align: center;
+}
+
+.navmenu.left {
+  left: -90px;
+  float: left;
+}
+
+
+
+.eventlogo {
+  display: block;
+  width: 1000px;
+  padding-top: 81px;
+}
+
+.dealershiplogo {
+  position: static;
+  display: block;
+  overflow: visible;
+  margin-right: auto;
+  margin-left: auto;
+  float: none;
+  text-align: center;
+}
+
+.imagelogo {
+  width: 500px;
+/*  padding-top: 5px;*/
+}
+
+/*.topshape {
+  position: relative;
+  z-index: 1001;
+  display: block;
+  margin-right: auto;
+  margin-left: auto;
+  padding-top: 76px;
+}
+*/
+.containernav {
+  position: static;
+  z-index: 6001;
+}
+
+.headerbase {
+  position: fixed;
+  left: 0px;
+  top: 0px;
+  right: 0px;
+  height: 80px;
+  border-bottom: 4px solid #3a9362;
+  background-color: #fff;
+  box-shadow: 1px 1px 6px 1px rgba(0, 0, 0, .75);
+  z-index:4000;
+}
+
+.sectionpulls {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  text-decoration:none;
+  margin-top: 25px;
+  padding-bottom: 50px;
+}
+
+
+/*Change width & height to adjust for more pulls*/
+.blockpullcard {
+  width: 65px;
+  height: 65px;
+  margin: 10px;
+  float: none;
+  border-radius: 8px;
+  background-color: #3a9362;
+  background-image: url('../images/logo-area-small.png');
+  background-position: 50% 50%;
+  background-size: 90px;
+  background-repeat: no-repeat;
+  position:absolute;
+  padding-left: 4px;
+  color:#fff;
+}
+
+/*.blockpullcard:hover {
+  width: 175px;
+  height: 175px;
+  border: 1px none #353535;
+  background-color: #d1d1d1;
+  box-shadow: 0 0 7px 2px rgba(58, 58, 58, .42);
+}*/
+
+.logopullcard {
+  display: block;
+  margin: auto;
+  padding-top: 63px;
+}
+
+
+/*adjust font size and width & height to match blockpullcard*/
+.ammount {
+	width: 65px;
+ 	height: 65px;
+	margin: 10px;
+	float: none;
+	padding-top: 25px;
+	border-radius: 8px;
+	background-color: #fefefe;
+	background-position: 50% 50%;
+	background-size: 158px;
+	background-repeat: no-repeat;
+	align-content:center;
+	text-align:center;
+	font-size:20	px;
+	font-weight:bold;
+	font-family: Baskerville, "Palatino Linotype", Palatino, "Century Schoolbook L", "Times New Roman", serif;
+	color:#515151;
+	position: aboslute;
+	top: 0px;
+	z-index: -1;
+	box-shadow: 0 0 7px 2px rgba(58, 58, 58, .42);
+}
+
+
+#rewards_overlay {
+	  	
+	/** Default lightbox to hidden */
+	display: none;
+
+	/** Position and style */
+	position: fixed;
+	z-index: 99999;
+	width: 100%;
+	height: 100%;
+	text-align: center;
+	top: 0;
+	left: 0;
+	background: rgba(0,0,0,0.8);
+	
+}
+
+
+
+#rewards {
+	max-width: 400px;
+    max-height: 80%;
+    padding: 20px 20px;
+    background: #ffffff;
+    margin: 150px auto;
+	
+}
+
+
+#rewards h2 {
+	margin-top:0;	
+}
